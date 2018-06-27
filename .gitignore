@@ -1,0 +1,10 @@
+# bundle
+.bundle
+vendor/bundle
+
+# environment
+.env
+
+# log
+hawkeye-bot-daemon.pid
+hawkeye-bot.log*
