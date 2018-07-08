@@ -3,7 +3,7 @@ module Hawkeye
     class Trend < SlackRubyBot::Commands::Base
       command 'trend' do |client, data, match|
         client.say(channel: data.channel, text: "GitHubからTrending情報を取得中...")
-        params = match[3].split
+        params = match[3] ? match[3].split : []
         trends = Hawkeye::Helper::GithubHelper.trending(params.at(0), params.at(1))
         message = ""
         trends.each_with_index do |trend, idx|
