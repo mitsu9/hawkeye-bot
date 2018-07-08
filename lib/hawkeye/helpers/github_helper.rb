@@ -22,7 +22,7 @@ module Hawkeye
           repo_list.take(TREND_COUNT).map do |node|
             repo_href = node.xpath('.//a')[0]["href"]
             summary = node.xpath('.//div[@class="py-1"]/p').text.strip
-            { repo: repo_href, summary: summary , link: "https://github/com#{repo_href}" }
+            { repo: repo_href, summary: summary , link: "https://github.com#{repo_href}" }
           end
         end
 
